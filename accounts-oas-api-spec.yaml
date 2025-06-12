@@ -1,0 +1,305 @@
+openapi: 3.0.3
+info:
+  title: Accounts API
+  version: 1.0.0
+  description: |
+    API for managing bank accounts.  
+    - Follows MuleSoft API Management Best Practices v1.1  
+    - Conforms to OWASP API Security Top 10 2019
+  contact:
+    name: API Support
+    email: support@example.com
+
+tags:
+  - name: Accounts
+    description: Operations related to accounts
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    Account:
+      type: object
+      required:
+        - accountId
+        - fromDate
+        - toDate
+        - firstName
+        - lastName
+        - address
+        - city
+        - state
+        - zipCode
+        - accountType
+      properties:
+        accountId:
+          type: string
+          example: "1469634948"
+        fromDate:
+          type: string
+          format: date
+          example: "2023-01-01"
+        toDate:
+          type: string
+          format: date
+          example: "2023-12-31"
+        firstName:
+          type: string
+          example: "John"
+        lastName:
+          type: string
+          example: "Doe"
+        address:
+          type: string
+          example: "123 Main St"
+        city:
+          type: string
+          example: "Springfield"
+        state:
+          type: string
+          example: "IL"
+        zipCode:
+          type: string
+          example: "62701"
+        accountType:
+          type: string
+          enum: [savings, checkings, brokerage]
+          example: "savings"
+
+    AccountInput:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - address
+        - city
+        - state
+        - zipCode
+        - accountType
+      properties:
+        firstName:
+          type: string
+          example: "Test"
+        lastName:
+          type: string
+          example: "User"
+        address:
+          type: string
+          example: "100 Test Blvd"
+        city:
+          type: string
+          example: "Testville"
+        state:
+          type: string
+          example: "NY"
+        zipCode:
+          type: string
+          example: "10001"
+        accountType:
+          type: string
+          enum: [savings, checkings, brokerage]
+          example: "savings"
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Account not found"
+
+security:
+  - basicAuth: []
+
+paths:
+  /accounts:
+    get:
+      tags: [Accounts]
+      summary: Get all accounts
+      security:
+        - basicAuth: []
+      responses:
+        "200":
+          description: List of accounts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Account"
+              examples:
+                Example:
+                  value:
+                    - accountId: "1234567890"
+                      fromDate: "2023-01-01"
+                      toDate: "2023-12-31"
+                      firstName: "John"
+                      lastName: "Doe"
+                      address: "123 Main St"
+                      city: "Springfield"
+                      state: "IL"
+                      zipCode: "62701"
+                      accountType: "savings"
+                    - accountId: "1234567890"
+                      fromDate: "2023-02-01"
+                      toDate: "2023-12-31"
+                      firstName: "Jane"
+                      lastName: "Smith"
+                      address: "456 Oak Ave"
+                      city: "Greenville"
+                      state: "CA"
+                      zipCode: "95947"
+                      accountType: "checkings"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Unauthorized"
+        "429":
+          description: Too Many Requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Too Many Requests"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Something went wrong!"
+
+    post:
+      tags: [Accounts]
+      summary: Create a new account
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccountInput"
+            example:
+              firstName: "Test"
+              lastName: "User"
+              address: "100 Test Blvd"
+              city: "Testville"
+              state: "NY"
+              zipCode: "10001"
+              accountType: "savings"
+      responses:
+        "201":
+          description: Account created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Account"
+              example:
+                accountId: "1234567890"
+                fromDate: "2024-06-01"
+                toDate: "2024-12-31"
+                firstName: "Test"
+                lastName: "User"
+                address: "100 Test Blvd"
+                city: "Testville"
+                state: "NY"
+                zipCode: "10001"
+                accountType: "savings"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Invalid input"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Unauthorized"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Something went wrong!"
+
+  /accounts/{accountId}:
+    get:
+      tags: [Accounts]
+      summary: Get account by accountId
+      security:
+        - basicAuth: []
+      parameters:
+        - name: accountId
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: "^[0-9]{10}$"
+            example: "8053435318"
+      responses:
+        "200":
+          description: Account found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Account"
+              example:
+                accountId: "301b960b-6b0b-40ef-a635-ada6b13f13c8"
+                fromDate: "2023-01-01"
+                toDate: "2023-12-31"
+                firstName: "John"
+                lastName: "Doe"
+                address: "123 Main St"
+                city: "Springfield"
+                state: "IL"
+                zipCode: "62701"
+                accountType: "savings"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Unauthorized"
+        "404":
+          description: Account not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Account not found"
+        "429":
+          description: Too Many Requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Too Many Requests"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                message: "Something went wrong!"
