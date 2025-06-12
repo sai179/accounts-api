@@ -55,7 +55,7 @@ pipeline {
             steps {
                 script {
                     def branchName = scm.branches[0].name
-                    sh """cd api;
+                    sh """
                         echo "Cataloging API in Anypoint Platform'";
                         errorCode="Error";
                         commandOutput=\$(api-catalog publish-asset --descriptor-file=catalog.yaml \
