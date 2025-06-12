@@ -60,7 +60,7 @@ pipeline {
                         errorCode="Error";
                         commandOutput=\$(api-catalog publish-asset --descriptor-file=catalog.yaml \
                         --host=${env.ANYPOINT_PLATFORM_URL} --organization=${env.ANYPOINT_PLATFORM_ORG_ID} \
-                        --environment=${env.ENVIRONMENT} \
+                        --environment=${env.ENVIRONMENT} --tag owasp --force-update-metadata \
                         --client_id=${env.CLIENT_ID} --client_secret=${env.CLIENT_SECRET});
                         if [[ \\"\$commandOutput\\" == *\\"\$errorCode\\"* ]]
                             then
