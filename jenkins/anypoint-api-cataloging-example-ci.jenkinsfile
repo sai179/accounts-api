@@ -7,9 +7,9 @@ pipeline {
     }
     environment {
         BUILD_VERSION = "build.${currentBuild.number}"
-        CLIENT_ID = "d7351c3792c242e29a303086d7ed3c7b"
-        CLIENT_SECRET = "3E9C6604E37443e388B75279ea0Ee4a6"
-        ANYPOINT_PLATFORM_ORG_ID = "43b555db-2264-4ed5-9c81-d456ba81aaa7"
+        CLIENT_ID = "0a299186f0d047a6834d34f8f574615c"
+        CLIENT_SECRET = "7EC78e4F26b04a68a93DBAcF05d17238"
+        ANYPOINT_PLATFORM_ORG_ID = "dba18167-c531-4c83-9b36-e91a26284e32"
     }
     parameters {
         string( name: 'BRANCH', defaultValue: "main", description: 'Project branch' )
