@@ -15,7 +15,7 @@ pipeline {
     parameters {
         string( name: 'BRANCH', defaultValue: "main", description: 'Project branch' )
         string( name: 'ANYPOINT_PLATFORM_URL', defaultValue: 'anypoint.mulesoft.com', description: 'URL for Anypoint Platform (Default: https://eu1.anypoint.mulesoft.com - Production Anypoint Platform)' )
-        string( name: 'ENVIRONMENT', defaultValue: "Prod-CH", description: 'Environment where the API documentation will be deployed' )
+        string( name: 'ENVIRONMENT', defaultValue: "Sandbox", description: 'Environment where the API documentation will be deployed' )
     }
     stages{
         stage('Checkout Release') {
