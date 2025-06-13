@@ -36,7 +36,7 @@ pipeline {
                 echo "Checkout Release completed: ${currentBuild.currentResult}"
             }
         }
-        stage('Downloading Anypoint Cataloging CLI') {
+      /*  stage('Downloading Anypoint Cataloging CLI') {
              steps {
                 script {
                        echo "npm install"
@@ -44,7 +44,7 @@ pipeline {
                       
                        //sh """npm install -g api-catalog-cli@latest"""
                 }
-            }   
+            }  
             post {
                 success {
                     echo "...Download of Anypoint Cataloging CLI succeded for ${env.BUILD_VERSION}: ${currentBuild.currentResult}"
@@ -53,7 +53,7 @@ pipeline {
                     echo "...Download of Anypoint Cataloging CLI failed for ${env.BUILD_VERSION}: ${currentBuild.currentResult}"
                 }
             }
-        }
+        }*/ 
         stage('Cataloging API in Anypoint Platform') {
             steps {
                 script {
