@@ -6,6 +6,7 @@ pipeline {
         skipDefaultCheckout true
     }
     environment {
+        PATH = "$HOME/.npm-global/bin:$PATH"
         BUILD_VERSION = "build.${currentBuild.number}"
         CLIENT_ID = "0a299186f0d047a6834d34f8f574615c"
         CLIENT_SECRET = "7EC78e4F26b04a68a93DBAcF05d17238"
@@ -39,7 +40,9 @@ pipeline {
              steps {
                 script {
                        echo "npm install"
-                       sh """npm install -g api-catalog-cli@latest"""
+                       sh """npm list -g api-catalog-cli"""
+                      
+                       //sh """npm install -g api-catalog-cli@latest"""
                 }
             }   
             post {
