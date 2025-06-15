@@ -8,9 +8,13 @@ pipeline {
     environment {
         PATH = "$HOME/.jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJs/lib/bin:$PATH"
         BUILD_VERSION = "build.${currentBuild.number}"
-        CLIENT_ID = "0a299186f0d047a6834d34f8f574615c"
-        CLIENT_SECRET = "7EC78e4F26b04a68a93DBAcF05d17238"
-        ANYPOINT_PLATFORM_ORG_ID = "dba18167-c531-4c83-9b36-e91a26284e32"
+        //CLIENT_ID = "0a299186f0d047a6834d34f8f574615c"
+        //CLIENT_SECRET = "7EC78e4F26b04a68a93DBAcF05d17238"
+        //ANYPOINT_PLATFORM_ORG_ID = "dba18167-c531-4c83-9b36-e91a26284e32"
+        CLIENT_ID = "a1416938dd37491388729290f6854676"
+        CLIENT_SECRET = "3b91cCC4178C46498F3F81d44a774179"
+        ANYPOINT_PLATFORM_ORG_ID = "0b429e15-7202-4436-b494-748364d1c28b"
+
     }
     parameters {
         string( name: 'BRANCH', defaultValue: "main", description: 'Project branch' )

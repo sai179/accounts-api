@@ -10,12 +10,9 @@ projects:
       Home: documentation/home.md
       Business Context: documentation/Business Context.md
       Technical View: documentation/Technical View.md
-      Reusable Assets and Libraries: documentation/Reusable Assets and Libraries.md
       API Usage: documentation/API Usage.md
       API Policies: documentation/API Policies.md
       Release Notes: documentation/Release Notes.md
-      References - Internal: documentation/References - Internal.md
-      References - External: documentation/References - External.md
       FAQ and Support: documentation/FAQ and Support.md
       Service Terms and Compliance: documentation/Service Terms and Compliance.md
     contact: 

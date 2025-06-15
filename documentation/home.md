@@ -1,1 +1,5 @@
-This page is summarising the API features and describing the value out of it. It can state the very high-level components (e.g. pointing the data source if case of lookup).
+Boost time-to-value in your customer 360 initiatives with pre-built APIs, templates, and reference architecture for financial services
+
+Financial services customers expect highly personalized products and services. MuleSoft Accelerator for Financial Services simplifies customer 360 initiatives by unlocking both core banking and insurance platforms, systems of engagement (such as CRM and ITSM), Insuretechs, and FinTech data. This enables a higher level of customer service, real-time relationship management, and a more connected digital experience.
+
+![](https://anypoint.mulesoft.com/exchange/org.mule.examples/mulesoft-accelerator-for-financial-services/1.12.0/external-resources/b429b11639391f0da0f9398039a6d0e07633f3c0/68747470733a2f2f7777772e6d756c65736f66742e636f6d2f6578742f736f6c7574696f6e732f696d616765732f66696e732d66756e6374696f6e616c2d766965772d6469616772616d2e737667)
