@@ -7,13 +7,13 @@ projects:
     tags: owasp, rest
    # The following documentation structure represents a comprehensive set of sections that a well-documented API should have. Edit the referred files under the /documentation directory to update their content
     documentation:
-      home: home.md
-      Automation: automation.md
-      Technical View: Technical View.md
-      API Policies: API Policies.md
-      Release Notes: Release Notes.md
-      FAQ and Support: FAQ and Support.md
-      Service Terms and Compliance: Service Terms and Compliance.md
+      Home: documentation/home.md
+      Technical View: documentation/Technical View.md
+      API Policies: documentation/API Policies.md
+      Release Notes: documentation/Release Notes.md
+      FAQ and Support: documentation/FAQ and Support.md
+      Service Terms and Compliance: documentation/Service Terms and Compliance.md
+      Automation: documentation/automation.md
     contact: 
       name: 'John Doe'
       email: 'john.doe@org.com'
