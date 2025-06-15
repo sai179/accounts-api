@@ -10,8 +10,8 @@ pipeline {
         BUILD_VERSION = "build.${currentBuild.number}"
         CLIENT_ID = "0a299186f0d047a6834d34f8f574615c"
         CLIENT_SECRET = "7EC78e4F26b04a68a93DBAcF05d17238"
-        //ANYPOINT_PLATFORM_ORG_ID = "dba18167-c531-4c83-9b36-e91a26284e32"
-        ANYPOINT_PLATFORM_ORG_ID = credentials('anypoint.platform.org.id')
+        ANYPOINT_PLATFORM_ORG_ID = "dba18167-c531-4c83-9b36-e91a26284e32"
+        
     }
     parameters {
         string( name: 'BRANCH', defaultValue: "main", description: 'Project branch' )
