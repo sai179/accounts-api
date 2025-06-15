@@ -1,17 +1,21 @@
-Describes for a internal consumer audience what the consumer can expect from the API and their obligations from a consumer perspective. This can include:
+# **MuleSoft End User License Agreement (EULA) 1. Definitions.**
 
-- Operational hours for the API
-- Regular maintenance windows
-- Update and enhancement frequencies
-- Usage restrictions,
-- can it be used for directly customer facing services
-- Is it restricted to a particular audience or jurisdiction
-- embedded in a re-sellable products
-- Are there maximum usage/rate limits
-- Compliance & Obligations
-    - What does the consumer need to implement from a controls perspective?
-    - How can the consumer use the data that is received?
-- Costs
-    - Are their costs that may be incurred by the consumer for using the service, either direct or indirect? Will there be a recharge?
-
-This is a simplified version of the service definition and terms of service that are applicable to an external customer
+1.1 “Affiliate” means any entity that End Customer, directly or indirectly, controls; an entity that controls End Customer; or an entity that is under common control with End Customer.  For purposes of this provision, “control” means ownership of at least fifty percent (50%) of the outstanding voting shares of the entity.
+1.2 "Cloud Offerings" means the proprietary MuleSoft web-based products and services that may be set forth on an Order Form and subsequently made available by MuleSoft (through Partner, pursuant to this Agreement) via the End Customer login link at anypoint.mulesoft.com and other web pages designated by MuleSoft including associated offline components, as described in the Documentation (but excluding Third Party Solution Components or infrastructure).
+1.3 “Confidential Information” means all code, inventions, know-how, business, technical and financial information that one party (“Receiving Party”) obtains from the other party (“Disclosing Party”); provided that such information is identified as confidential at the time of disclosure or should be reasonably known by the Receiving Party to be Confidential Information due to the nature of the information disclosed and the circumstances surrounding the disclosure; and provided further that any software, documentation or technical information provided by MuleSoft (or its agents), performance information relating to the Software, shall be deemed Confidential Information of MuleSoft without any marking or further designation.
+1.4 “Core” means either a physical CPU core or a “virtual core” (also referred to as a vCPU), which is a logical partition of a physical CPU core.
+1.5 “End Customer Data” means End Customer’s electronic data other than Log Data.
+1.6 “Documentation” means the technical specification documentation generally made available by MuleSoft to its subscription customers with regard to the Software.
+1.7 “Materials” means any materials provided by MuleSoft to End Customer in connection with the provision of Services.
+1.8 “Order Form” means the relevant ordering document referencing or incorporating this Agreement and reflecting the Software licenses, Cloud Offerings, Services, and Support and Maintenance (as applicable), purchased by End Customer from Partner.
+1.9 “Services” means professional consulting services purchased by End Customer in the applicable Order Form and SOW and relating to training and assistance with Software or Cloud Offerings installation, deployment, or usage.
+1.10 “Software” means (i) the proprietary MuleSoft software products that are deployed on End Customer’s premise and that are specified in an Order Form; and (ii) all related Documentation for and any Support and Maintenance releases of the same Software (but excluding Third Party Solution Components).
+1.11 “SOW” means a Statement of Work between MuleSoft and End Customer or Partner and End Customer with respect to Services.
+1.12 “Subscription” means the End Customer’s right to access and use the relevant Software or Cloud Offerings and Support and Maintenance on a subscription basis, as and to the extent listed on an Order Form.
+1.13 “Subscription Term” means the duration of a Subscription as set forth on an Order Form.
+1.14 “Support and Maintenance” means the applicable support and maintenance services as provided for in the following link: https://www.mulesoft.com/legal/support-maintenance-terms.
+1.15 “Term” means the period commencing as of the Effective Date and expiring on the day that the last Subscription Term under this Agreement terminates.
+1.16 "Third Party Solution Components" means online applications and offline software that are provided by entities or individuals other than MuleSoft and that interoperate with the Software or Cloud Offerings.
+1.17 “Users” means the End Customer’s employees and contractors which are authorized by End Customer to access and use Software or Cloud Offerings purchased under an Order Form.
+1.18 “VCore” means a unit of compute capacity for processing on CloudHub platform, which is equal to one core.
+1.19 “Warranty Period” means a period of thirty (30) days following the commencement of the relevant Subscription Term.

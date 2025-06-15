@@ -1,4 +1,4 @@
-Boost time-to-value in your customer 360 initiatives with pre-built APIs, templates, and reference architecture for financial services
+# Boost time-to-value in your customer 360 initiatives with pre-built APIs, templates, and reference architecture for financial services
 
 Financial services customers expect highly personalized products and services. MuleSoft Accelerator for Financial Services simplifies customer 360 initiatives by unlocking both core banking and insurance platforms, systems of engagement (such as CRM and ITSM), Insuretechs, and FinTech data. This enables a higher level of customer service, real-time relationship management, and a more connected digital experience..
 
