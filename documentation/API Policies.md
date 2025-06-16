@@ -2,6 +2,14 @@ The APIs implement the OAuth 2.0 for secure authentication and authorization. Th
 
 All communication with our servers must be over TLS (https://).
 
+![](https://docs.mulesoft.com/mule-gateway/_images/open-id-policy-workflow.png)
+
+1. The user first sends an HTTP request to the API protected by the policy.
+2. The policy extracts the token from the request and sends it to the validation endpoint to verify the integrity of the token.
+3. The token validation endpoint returns token metadata, including the client ID of the client application.
+4. Using a local database updated with contracts previously obtained from Anypoint Platform, the policy verifies whether the client ID has access to the API.
+5. If all the validations are successfully completed, the request is allowed to reach the backend.
+
 ## Step 1:Get your authorization token
 
 To get an authentication token, you will need the client_id and client_secret for your application, these can be found on the developer portal My Application page: [https://anypoint.mulesoft.com/exchange/portals/org/applications/](https://anypoint.mulesoft.com/exchange/portals/org/applications/)
