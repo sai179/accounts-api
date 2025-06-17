@@ -287,14 +287,6 @@ paths:
                 $ref: "#/components/schemas/Error"
               example:
                 message: "Account not found"               
-        "429":
-          description: Too Many Requests
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-              example:
-                message: "Too Many Requests"
         "500":
           description: Internal server error
           content:
