@@ -2,7 +2,7 @@
 projects:
   - main: accounts-oas-api-spec.yaml
     assetId: accounts-api
-    version: 1.0.0
+    version: 1.0.1
     apiVersion: v1
     tags: owasp, rest
    # The following documentation structure represents a comprehensive set of sections that a well-documented API should have. Edit the referred files under the /documentation directory to update their content
